@@ -1,3 +1,4 @@
+import pyperclip
 from puzzle.input import get_puzzle_input
 
 
@@ -47,5 +48,8 @@ if __name__ == '__main__':
         box = Box(d)
         wrapping_paper += box.surface_area() + box.area()
         ribbon += box.perimeter() + box.volume()
+
+    # pyperclip.copy(wrapping_paper)
     print(f'part 1:\n{wrapping_paper}')
+    pyperclip.copy(ribbon)
     print(f'part 2:\n{ribbon}')

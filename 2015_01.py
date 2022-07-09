@@ -1,3 +1,4 @@
+import pyperclip
 from puzzle.input import get_puzzle_input
 
 
@@ -20,5 +21,7 @@ if __name__ == '__main__':
         elif i == down:
             floor -= 1
 
+    # pyperclip.copy(floor)
     print(f'part 1:\n{floor}')
+    pyperclip.copy(base_entry_idx)
     print(f'part 2:\n{base_entry_idx}')

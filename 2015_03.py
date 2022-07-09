@@ -1,3 +1,4 @@
+import pyperclip
 from puzzle.input import get_puzzle_input
 
 
@@ -61,5 +62,10 @@ if __name__ == '__main__':
         else:
             robo_santa.move(d)
 
-    print(f'part 1:\n{len(santa.seen)}')
-    print(f'part 2:\n{combine(og_santa.seen, robo_santa.seen)}')
+    p1 = len(santa.seen)
+    # pyperclip.copy(p1)
+    print(f'part 1:\n{p1}')
+
+    p2 = combine(og_santa.seen, robo_santa.seen)
+    pyperclip.copy(p2)
+    print(f'part 2:\n{p2}')
