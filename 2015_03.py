@@ -7,6 +7,14 @@ down = 'v'
 left = '<'
 
 
+def combine(a, b):
+    return len(a + list(set(b) - set(a)))
+
+
+def is_even(i):
+    return i % 2 == 0
+
+
 class Grid:
 
     def __init__(self):
@@ -35,10 +43,6 @@ class Grid:
         self.append_coord()
 
 
-def combine(a, b):
-    return len(a + list(set(b) - set(a)))
-
-
 if __name__ == '__main__':
     santa = Grid()
     og_santa = Grid()
@@ -52,7 +56,7 @@ if __name__ == '__main__':
 
     for idx, d in enumerate(directions):
         santa.move(d)
-        if idx % 2 == 0:
+        if is_even(idx):
             og_santa.move(d)
         else:
             robo_santa.move(d)
