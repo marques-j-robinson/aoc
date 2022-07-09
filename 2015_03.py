@@ -1,4 +1,4 @@
-from puzzle_input import get_puzzle_input
+from puzzle.input import get_puzzle_input
 
 
 up = '^'
